@@ -1,8 +1,7 @@
 """Polish the job-site photos for the web.
 
 Reads assets/img/original/*.jpg, crops away most of the bare dirt / house-wrap,
-lifts contrast and color a touch, sharpens, and writes WebP at two widths plus
-one JPG for social sharing.
+lifts contrast and color a touch, sharpens, and writes WebP at two widths.
 
     python3 tools/polish_photos.py
 """
@@ -47,10 +46,7 @@ def main():
             r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
         print(f"{src:7} -> {name}  {im.width}x{im.height}")
     before_after()
-    # Social share image (1200x630) from the hero photo
-    hero = polish(Image.open(SRC / "8.jpg").convert("RGB"))
-    ImageOps.fit(hero, (1200, 630), Image.LANCZOS, centering=(0.5, 0.45)).save(
-        ROOT / "assets/img/og-image.jpg", "JPEG", quality=84, optimize=True, progressive=True)
+    # The social share image is made by tools/share_card.py
 
 
 def before_after():
