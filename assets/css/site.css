@@ -340,9 +340,11 @@ legend { font: 700 .74rem/1 var(--body); letter-spacing: .18em; text-transform: 
 .howto span { font: 700 .95rem/1.15 var(--head); letter-spacing: .04em; text-transform: uppercase; }
 .estimate__form { background: var(--white); border: 2px solid var(--ink); border-top: 8px solid var(--red); padding: 30px; border-radius: var(--radius); display: grid; gap: 16px; box-shadow: 12px 12px 0 var(--paper-2); }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.field { display: grid; gap: 6px; align-content: start; }
+.field { display: flex; flex-direction: column; gap: 6px; }
 .field span { font: 700 .78rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; }
 .field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 1rem; padding: 12px 13px; border: 2px solid #cbc5b8; border-radius: var(--radius); background: #fbfaf7; color: var(--ink); }
+/* Same box size in every browser and for every input type (Safari sizes email/tel boxes its own way otherwise) */
+.field input, .field select { -webkit-appearance: none; appearance: none; height: 52px; line-height: 1.2; margin: 0; box-sizing: border-box; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); background: var(--white); }
 .field .is-bad, .field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: var(--rust); }
 .hp { position: absolute; left: -9999px; }
