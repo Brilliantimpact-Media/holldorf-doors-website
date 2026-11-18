@@ -40,6 +40,17 @@
     heroIn();
   }
 
+  /* ---------- Hero drawing: hover or focus a label to light up that part ---------- */
+  var plan = $('.plan');
+  if (plan) {
+    $$('.callout', plan).forEach(function (c) {
+      var on = function () { plan.dataset.hl = c.dataset.part; };
+      var off = function () { if (plan.dataset.hl === c.dataset.part) delete plan.dataset.hl; };
+      c.addEventListener('mouseenter', on); c.addEventListener('focus', on);
+      c.addEventListener('mouseleave', off); c.addEventListener('blur', off);
+    });
+  }
+
   /* ---------- Header + nav ---------- */
   var header = $('.site-header'), nav = $('#nav'), toggle = $('.nav-toggle');
   var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 40); };

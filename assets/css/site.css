@@ -122,8 +122,36 @@ button { font: inherit; }
 .plan .ln--lead { stroke: #9aa2a7; stroke-width: 1; }
 .plan .dotc { fill: #ff4a4f; }
 .plan .dim-t { font: 700 17px var(--head); letter-spacing: .06em; fill: #ff4a4f; text-anchor: middle; }
-.plan .call-t { font: 600 15px var(--head); letter-spacing: .1em; text-transform: uppercase; fill: #c3c8cb; }
-.hero__sheet { position: absolute; right: 16px; bottom: 40px; margin: 0; display: flex; border: 1px solid rgba(255,255,255,.22); font: 600 .68rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: #8f979c; }
+.plan .call-t { font: 600 15px var(--head); letter-spacing: .1em; text-transform: uppercase; fill: #c3c8cb; transition: fill .25s, transform .3s cubic-bezier(.2,.7,.2,1); }
+/* Hover a label: it slides out and turns red, its leader lights up, and the part glows on the drawing */
+.plan .callout { cursor: default; outline: none; }
+.plan .hit { fill: transparent; }
+.plan .call-s { font: 500 13px var(--body); fill: #9aa2a7; opacity: 0; transition: opacity .3s, transform .3s; transform: translateY(-4px); }
+.plan .ln--lead { transition: stroke .25s, stroke-width .25s; }
+.plan .dotc { transition: r .25s; }
+.plan .dotc-ring { fill: none; stroke: #ff4a4f; stroke-width: 1.5; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.hero-in .plan .dotc-ring { animation: dot-ping 2.6s ease-out 3s infinite; }
+@keyframes dot-ping { 0% { opacity: .9; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(4.5); } }
+.plan .callout:hover .call-t, .plan .callout:focus-visible .call-t { fill: #ff4a4f; }
+.plan .callout[data-part="trim"]:hover .call-t, .plan .callout[data-part="trim"]:focus-visible .call-t { transform: translateX(-6px); }
+.plan .callout:not([data-part="trim"]):hover .call-t, .plan .callout:not([data-part="trim"]):focus-visible .call-t { transform: translateX(6px); }
+.plan .callout:hover .call-s, .plan .callout:focus-visible .call-s { opacity: 1; transform: none; }
+.plan .callout:hover .ln--lead, .plan .callout:focus-visible .ln--lead { stroke: #ff4a4f; stroke-width: 1.8; }
+.plan .callout:hover .dotc, .plan .callout:focus-visible .dotc { r: 5; }
+.plan .part { opacity: 0; transition: opacity .35s ease; pointer-events: none; }
+.plan[data-hl="trim"] .part--trim, .plan[data-hl="springs"] .part--springs,
+.plan[data-hl="sections"] .part--sections, .plan[data-hl="opener"] .part--opener { opacity: 1; }
+.plan .pl { fill: none; stroke: #ff4a4f; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.plan .pl--coil { stroke-width: 2; }
+.plan .pl--cable { stroke-width: 1.2; stroke-dasharray: 3 4; }
+.plan .pl--trace { stroke-width: 3.4; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.plan[data-hl="trim"] .pl--trace { animation: plan-draw .7s cubic-bezier(.5,0,.2,1) forwards; }
+.plan .pl--beam { stroke-width: 2; stroke-dasharray: 8 6; }
+.plan[data-hl="opener"] .pl--beam { animation: beam .6s linear infinite; }
+@keyframes beam { to { stroke-dashoffset: -14; } }
+.plan .pl-fill { fill: rgba(255,74,79,.16); }
+.plan .pl-solid { fill: #ff4a4f; }
+.hero__sheet { position: absolute; left: 16px; bottom: 40px; margin: 0; display: flex; border: 1px solid rgba(255,255,255,.22); font: 600 .68rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: #8f979c; }
 .hero__sheet span { padding: 7px 10px; }
 .hero__sheet span + span { border-left: 1px solid rgba(255,255,255,.22); }
 /* draw-in (plays as the door lifts) */

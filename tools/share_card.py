@@ -50,7 +50,7 @@ HTML = '''<!doctype html><html><head><meta charset="utf-8">
   .plan .ln--glass { fill: rgba(255,255,255,.07); } .plan .ln--glint { stroke-width: 1; stroke: #8d959a; }
   .plan .ln--dim { stroke: #ff4a4f; stroke-width: 1.6; } .plan .ln--ext { stroke: #ff4a4f; stroke-width: 1; stroke-opacity: .6; }
   .plan .dim-t { font: 700 18px "Barlow Condensed"; letter-spacing: .06em; fill: #ff4a4f; text-anchor: middle; }
-  .plan .callouts { display: none; }
+  .plan .callouts, .plan .parts { display: none; }
   .tape { position: absolute; left: -20px; right: -20px; bottom: 22px; height: 34px; transform: rotate(-1.2deg); border-block: 4px solid #16191c;
     background: repeating-linear-gradient(-45deg, #f6c300 0 20px, #16191c 20px 40px); box-shadow: 0 6px 14px rgba(0,0,0,.35); }
 </style></head><body>
