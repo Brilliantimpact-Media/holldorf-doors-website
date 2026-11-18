@@ -1,0 +1,90 @@
+  <!-- ============ Estimate (shared: homepage + /free-estimate/) ============ -->
+  <section class="section estimate" id="estimate">
+    <div class="wrap estimate__grid">
+      <div class="estimate__info" data-reveal>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Free estimate</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
+        <{{h}}>Tell us about the door.</{{h}}>
+        <p>Start with your name and number, then answer a few quick questions so we show up with the right parts and a real number. Takes about a minute. Door stuck right now? Just call.</p>
+        <div class="cplate">
+          <i class="cplate__rivet cplate__rivet--tl"></i><i class="cplate__rivet cplate__rivet--tr"></i><i class="cplate__rivet cplate__rivet--bl"></i><i class="cplate__rivet cplate__rivet--br"></i>
+          <p class="cplate__label"><svg class="cplate__mark" viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg>Call Taden direct</p>
+          <a class="cplate__phone" href="tel:+17159283002"><svg><use href="#i-phone"/></svg>715-928-3002</a>
+          <ul class="cplate__list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Email</span><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4.5 4.2-7 8-7s7 2.5 8 7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Owner</span>Taden Holldorf</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><span>Based in</span>Baldwin, WI 54002</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v10H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 21v-6h8v6M8 18h8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Serving</span>Residential &amp; commercial</li>
+          </ul>
+        </div>
+        <ol class="howto">
+          <li><b>01</b><span>Send your door plan</span></li>
+          <li><b>02</b><span>Taden calls you back</span></li>
+          <li><b>03</b><span>Free look &amp; written quote</span></li>
+        </ol>
+      </div>
+
+      <!-- Contact first, then the Door Planner. Follow-up questions depend on the job picked
+           (built in estimate.js); every question has an "Other" option. -->
+      <form class="estimate__form planner" id="estimate-form" novalidate data-reveal data-thanks="{{root}}thank-you.html">
+        <fieldset class="contact-block">
+          <legend>Let's start with you.</legend>
+          <div class="field-row">
+            <label class="field"><span>Name *</span><input name="name" autocomplete="name" required aria-describedby="err-name"><em class="field-err" id="err-name"></em></label>
+            <label class="field"><span>Phone *</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="err-phone"><em class="field-err" id="err-phone"></em></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Town</span><input name="town" autocomplete="address-level2" placeholder="Baldwin"></label>
+            <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" aria-describedby="err-email"><em class="field-err" id="err-email"></em></label>
+          </div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </fieldset>
+
+        <div class="build-pick" id="build-pick" hidden>
+          <span>Door Builder pick</span>
+          <p></p>
+          <button type="button" class="link-btn" id="build-clear">Remove</button>
+          <input type="hidden" name="door_builder">
+        </div>
+
+        <div class="planner-block">
+          <div class="planner-top">
+            <p class="planner-kicker">Door planner <span>(optional)</span></p>
+            <p class="meter-label" aria-live="polite">Step 1</p>
+          </div>
+          <div class="meter" aria-hidden="true"><div class="meter-door"></div></div>
+
+          <fieldset class="q on" data-key="type" data-single data-label="Job">
+            <legend>What do you need?</legend>
+            <div class="opts opts-icon">
+              <button type="button" class="opt" data-v="New door"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18 24 6l18 12v24H6z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 24h24v18H12z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 30h24M12 36h24" stroke="currentColor" stroke-width="2.5"/></svg><strong>New door</strong><span>New build or new garage</span></button>
+              <button type="button" class="opt" data-v="Replace my door"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V14h32v26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 20h20M14 27h20M14 34h20" stroke="currentColor" stroke-width="2.5"/><path d="m30 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 10h24" stroke="currentColor" stroke-width="3"/></svg><strong>Replace my door</strong><span>Swap out the old one</span></button>
+              <button type="button" class="opt" data-v="Repair"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L6 35l7 7 15-15A10 10 0 0 0 42 18l-6 6-6-2-2-6 6-6a10 10 0 0 0-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><strong>Repair</strong><span>Springs, cables, tracks</span></button>
+              <button type="button" class="opt" data-v="Opener"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="8" width="20" height="12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M4 14h12M26 20v6" stroke="currentColor" stroke-width="3"/><rect x="18" y="26" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="3" fill="currentColor"/></svg><strong>Opener</strong><span>Install, repair, convert</span></button>
+              <button type="button" class="opt" data-v="Commercial or pole building"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 42V16L24 6l20 10v26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 42V22h20v20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 28h20M14 34h20" stroke="currentColor" stroke-width="2.5"/></svg><strong>Shop or commercial</strong><span>Pole buildings, barns, shops</span></button>
+              <button type="submit" class="opt opt-send send-now"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><strong>Just send my info</strong><span>Skip the questions. Taden will call you.</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="q q-final" data-key="final">
+            <legend>Here's your door plan.</legend>
+            <div class="plan-card">
+              <dl class="plan-list"></dl>
+              <div>
+                <p class="plan-head">What happens next</p>
+                <ul class="plan-expect"></ul>
+              </div>
+            </div>
+            <label class="field final-note"><span class="final-label">Anything else we should know?</span><textarea name="details" rows="3" placeholder="Door size, what's going on, best time to reach you..."></textarea></label>
+            <input type="hidden" name="door_plan">
+            <button class="btn btn--red btn--block send-plan" type="submit">Send my door plan <svg><use href="#i-arrow"/></svg></button>
+          </fieldset>
+
+          <div class="planner-nav">
+            <button type="button" class="link-btn p-back" disabled>Back</button>
+            <button type="button" class="btn btn--dark btn--sm p-next" disabled>Next</button>
+          </div>
+        </div>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>

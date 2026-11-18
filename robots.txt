@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you.html
+
+Sitemap: https://brilliantimpact-media.github.io/holldorf-doors-website/sitemap.xml

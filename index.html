@@ -5,28 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Holldorf Garage Doors | Garage Door Installation &amp; Repair in Baldwin, WI</title>
 <meta name="description" content="Garage door sales, installation and repair. New garage doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Residential and commercial. Free estimates: 715-928-3002.">
+<link rel="canonical" href="https://brilliantimpact-media.github.io/holldorf-doors-website/">
+<meta property="og:url" content="https://brilliantimpact-media.github.io/holldorf-doors-website/">
 <meta name="theme-color" content="#d7191f">
 <!-- Form service address (Formspree, Web3Forms, etc.). Leave empty and the form opens an email instead. -->
 <meta name="hd-form-endpoint" content="">
-<link rel="icon" href="favicon-48.png" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Holldorf Garage Doors | Baldwin, WI">
 <meta property="og:description" content="New doors, repairs and openers for homes, shops and pole buildings. Free estimates.">
-<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:image" content="https://brilliantimpact-media.github.io/holldorf-doors-website/assets/img/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
-<link rel="preload" as="image" href="assets/img/photos/wood-look-modern-doors-1600.webp">
+<link rel="stylesheet" href="assets/css/site.css?v=202611181426">
 <script>
-  /* Decide on the garage-door intro before first paint so there is no flash. */
+  /* The garage-door intro plays on every load of the homepage (refresh included).
+     Skipped only when arriving at a section link like /#services, so those land straight on the section. */
   (function () {
-    var d = document.documentElement, seen = false;
+    var d = document.documentElement;
     d.classList.add('js');
-    try { seen = sessionStorage.getItem('hd-intro') === '1'; } catch (e) {}
-    if (location.search.indexOf('intro') > -1) seen = false;
-    if (!seen && !location.hash) d.classList.add('intro');
+    if (!location.hash || location.search.indexOf('intro') > -1) d.classList.add('intro');
   })();
 </script>
 <script type="application/ld+json">
@@ -55,7 +56,7 @@
     <div class="di-light"></div>
     <div class="di-door">
       <div class="di-sections"></div>
-      <img class="di-badge" src="assets/img/logo-800.webp" alt="" width="800" height="703">
+      <!-- BUILD:intro-badge --><div class="di-plate" aria-hidden="true"><i class="di-plate__rivet di-plate__rivet--tl"></i><i class="di-plate__rivet di-plate__rivet--tr"></i><i class="di-plate__rivet di-plate__rivet--bl"></i><i class="di-plate__rivet di-plate__rivet--br"></i><svg class="di-plate__mark" viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><path class="hd-mark__trim" d="M32 9.5 8.5 25h47Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg><span class="di-plate__name">Holldorf</span><span class="di-plate__sub">Garage Doors LLC</span><span class="di-plate__rule"></span><span class="di-plate__town">Baldwin, Wisconsin</span></div><!-- /BUILD:intro-badge -->
       <div class="di-seal"></div>
     </div>
   </div>
@@ -76,15 +77,16 @@
   })();
 </script>
 
-<!-- Shared SVG symbols -->
+<!-- BUILD:sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="m4 12.5 5 5L20 6.5"/></symbol>
 </svg>
-
+<!-- /BUILD:sprite -->
 <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- BUILD:header -->
 <div class="topbar">
   <div class="wrap topbar__in">
     <span><b>Free estimates</b> &middot; Residential &amp; commercial &middot; Baldwin, WI</span>
@@ -94,31 +96,25 @@
 
 <header class="site-header" id="top">
   <div class="wrap site-header__in">
-    <a class="brand" href="#top">
-      <img src="assets/img/logo-400.webp" alt="Holldorf Garage Doors" width="400" height="352">
-    </a>
+    <a class="brand" href="#top" aria-label="Holldorf Garage Doors, home"><span class="hd-lockup"><svg class="hd-lockup__icon" viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><path class="hd-mark__trim" d="M32 9.5 8.5 25h47Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg><span class="hd-lockup__words"><span class="hd-lockup__name">Holldorf</span><span class="hd-lockup__sub">Garage Doors LLC</span></span></span></a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#builder">Door Builder</a>
       <a href="#work">Our Work</a>
       <a href="#trouble">Repairs</a>
-      <a href="#estimate">Contact</a>
+      <a href="#estimate">Free Estimate</a>
     </nav>
     <a class="btn btn--red btn--sm header-cta" href="tel:+17159283002"><svg><use href="#i-phone"/></svg><span>Call now</span></a>
     <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
+<!-- /BUILD:header -->
 
 <main id="main">
 
   <!-- ============ Hero ============ -->
   <section class="hero">
-    <picture class="hero__bg">
-      <source media="(max-width: 700px)" srcset="assets/img/photos/wood-look-modern-doors-800.webp">
-      <img src="assets/img/photos/wood-look-modern-doors-1600.webp" alt="" width="1600" height="1088">
-    </picture>
     <div class="wrap hero__in">
-      <img class="hero__sign" src="assets/img/logo-800.webp" alt="Holldorf Garage Doors: garage door sales, installation and repairs. Taden Holldorf, 715-928-3002" width="800" height="703">
       <div class="hero__copy">
         <p class="hero__kicker"><span>Baldwin, WI</span><span>Residential</span><span>Commercial</span></p>
         <h1 class="hero__title">Garage doors, <span>hung right.</span></h1>
@@ -128,23 +124,21 @@
           <a class="btn btn--ghost" href="#estimate">Free estimate <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
+      <div class="hero__plan">
+        <!-- BUILD:hero-drawing --><svg class="plan" viewBox="0 30 960 345" role="img" aria-label="Line drawing of a garage with a 16 by 7 foot sectional door, labeled with torsion springs, insulated steel sections, opener, and weather seal"><g style="--d:0s"><path class="ln ln--ground" pathLength="1" d="M30 330H930"/></g><g style="--d:0.15s"><path class="ln" pathLength="1" d="M210 330V158M750 330V158"/><path class="ln" pathLength="1" d="M172 166 480 42 788 166"/><path class="ln" pathLength="1" d="M196 166 480 56 764 166"/><path class="ln" pathLength="1" d="M172 166h24M764 166h24"/><path class="ln ln--thin" pathLength="1" d="M210 158H750"/></g><g style="--d:0.45s"><path class="ln" pathLength="1" d="M292 164h376v166h-376z"/><path class="ln" pathLength="1" d="M304 176h352v154h-352z"/></g><g style="--d:0.75s"><path class="ln ln--thin" pathLength="1" d="M304 214.5h352"/><path class="ln ln--thin" pathLength="1" d="M304 253.0h352"/><path class="ln ln--thin" pathLength="1" d="M304 291.5h352"/><path class="ln ln--thin ln--glass" pathLength="1" d="M312 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M318 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M355 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M361 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M398 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M404 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M441 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M447 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M484 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M490 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M527 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M533 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M570 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M576 203.5l21 -16.5"/><path class="ln ln--thin ln--glass" pathLength="1" d="M613 183.0h35v24.5h-35z"/><path class="ln ln--glint" pathLength="1" d="M619 203.5l21 -16.5"/><path class="ln ln--thin" pathLength="1" d="M312 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M316 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M355 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M359 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M398 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M402 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M441 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M445 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M484 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M488 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M527 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M531 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M570 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M574 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M613 221.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M617 225.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M312 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M316 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M355 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M359 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M398 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M402 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M441 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M445 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M484 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M488 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M527 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M531 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M570 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M574 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M613 260.0h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M617 264.0h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M312 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M316 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M355 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M359 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M398 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M402 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M441 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M445 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M484 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M488 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M527 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M531 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M570 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M574 302.5h27v16.5h-27z"/><path class="ln ln--thin" pathLength="1" d="M613 298.5h35v24.5h-35z"/><path class="ln ln--hair" pathLength="1" d="M617 302.5h27v16.5h-27z"/></g><g style="--d:1.2s"><path class="ln ln--thin" pathLength="1" d="M222 192h14v22h-14z"/><path class="ln ln--thin" pathLength="1" d="M226 188h6M229 186v6"/><path class="ln ln--thin" pathLength="1" d="M726 192h14v22h-14z"/><path class="ln ln--thin" pathLength="1" d="M730 188h6M733 186v6"/></g><g style="--d:1.45s"><path class="ln ln--ext" pathLength="1" d="M304 336V364M656 336V364"/><path class="ln ln--dim" pathLength="1" d="M304 356H440.0M520.0 356H656"/><path class="ln ln--dim" pathLength="1" d="M299 361l10 -10M651 361l10 -10"/><path class="ln ln--ext" pathLength="1" d="M286 176H260M286 330H260"/><path class="ln ln--dim" pathLength="1" d="M270 176V227.0M270 279.0V330"/><path class="ln ln--dim" pathLength="1" d="M265 181l10 -10M265 335l10 -10"/></g><g class="fade" style="--d:1.9s"><text class="dim-t" x="480.0" y="361">16'-0"</text><text class="dim-t" x="270" y="258.0" transform="rotate(-90 270 253.0)">7'-0"</text></g><g class="callouts" style="--d:2.0s"><path class="ln ln--lead" pathLength="1" d="M300 168L230 110"/><circle class="dotc" cx="300" cy="168" r="3"/><path class="ln ln--lead" pathLength="1" d="M540 172L700 90"/><circle class="dotc" cx="540" cy="172" r="3"/><path class="ln ln--lead" pathLength="1" d="M646 262L770 250"/><circle class="dotc" cx="646" cy="262" r="3"/><path class="ln ln--lead" pathLength="1" d="M646 324L770 312"/><circle class="dotc" cx="646" cy="324" r="3"/></g><g class="callouts fade" style="--d:2.35s"><text class="call-t" x="222" y="114" text-anchor="end">Trim + weather seal</text><text class="call-t" x="708" y="95" text-anchor="start">Torsion springs + cables</text><text class="call-t" x="778" y="255" text-anchor="start">Insulated steel sections</text><text class="call-t" x="778" y="317" text-anchor="start">Opener + safety eyes</text></g></svg><!-- /BUILD:hero-drawing -->
+      </div>
     </div>
+    <p class="hero__sheet" aria-hidden="true"><span>Holldorf Garage Doors</span><span>Sheet A-1</span><span>Drawn in Baldwin, WI</span></p>
   </section>
 
-  <div class="tape" aria-hidden="true">
-    <div class="tape__track">
-      <span>Free estimates</span><span>Sales</span><span>Installation</span><span>Repairs</span><span>Openers</span><span>Springs &amp; cables</span><span>715-928-3002</span>
-      <span>Free estimates</span><span>Sales</span><span>Installation</span><span>Repairs</span><span>Openers</span><span>Springs &amp; cables</span><span>715-928-3002</span>
-    </div>
-  </div>
-
+  <div class="tape" aria-hidden="true"></div>
 
   <!-- ============ Services ============ -->
   <section class="section services" id="services">
     <div class="wrap">
-      <header class="section-head section-head--center" data-reveal>
-        <p class="kicker">What we do</p>
-        <h2>Every part of the door,<br>from the springs up.</h2>
+      <header class="section-head section-head--center section-head--tight" data-reveal>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">What we do</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
+        <h2>Every part of the door, from the springs up.</h2>
         <p>One call covers it: picking a new door, hanging it, wiring the opener, or getting a stuck door back on track.</p>
       </header>
       <div class="svc-grid">
@@ -191,39 +185,49 @@
   <!-- ============ Door builder ============ -->
   <section class="section builder" id="builder">
     <div class="wrap">
-      <header class="section-head section-head--light section-head--center" data-reveal>
-        <p class="kicker">Door Builder</p>
+      <header class="section-head section-head--light section-head--center section-head--tight" data-reveal>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Door Builder</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>Build your door before we hang it.</h2>
-        <p>Pick a style, finish and windows and see it on your building. Send the build with your estimate request and we'll price it out.</p>
+        <p>Pick a style, finish, windows and siding, then send it with your estimate.</p>
       </header>
       <div class="builder__grid" data-reveal>
         <div class="builder__stage">
-          <svg id="door-preview" viewBox="0 0 400 260" role="img" aria-label="Preview of the door you built"></svg>
-          <p class="builder__note">Illustration only. Exact styles, colors and windows depend on the door line, and we'll walk you through them at the estimate.</p>
+          <svg id="door-preview" viewBox="0 22 400 248" role="img" aria-label="Preview of the door you built"></svg>
+          <div class="ticket">
+            <div class="ticket__body">
+              <div class="ticket__head"><span>Build ticket</span><span id="ticket-no">#HD-0000</span></div>
+              <p id="build-summary" aria-live="polite"></p>
+            </div>
+            <a class="btn btn--red" href="#estimate" id="quote-build">Quote this door <svg><use href="#i-arrow"/></svg></a>
+          </div>
         </div>
         <form class="builder__controls" id="builder-form" onsubmit="return false">
           <fieldset>
             <legend>Style</legend>
-            <div class="chips" data-opt="style">
+            <div class="chips">
               <label><input type="radio" name="style" value="raised" checked><span>Raised panel</span></label>
+              <label><input type="radio" name="style" value="long"><span>Long panel</span></label>
               <label><input type="radio" name="style" value="carriage"><span>Carriage house</span></label>
               <label><input type="radio" name="style" value="flush"><span>Flush modern</span></label>
               <label><input type="radio" name="style" value="ribbed"><span>Commercial</span></label>
             </div>
           </fieldset>
           <fieldset>
-            <legend>Finish</legend>
-            <div class="swatches" data-opt="finish">
+            <legend>Door finish</legend>
+            <div class="swatches">
               <label title="White"><input type="radio" name="finish" value="white" checked><span style="--sw:#f3f2ee"></span><em>White</em></label>
               <label title="Almond"><input type="radio" name="finish" value="almond"><span style="--sw:#e6dcc6"></span><em>Almond</em></label>
+              <label title="Sandtone"><input type="radio" name="finish" value="sandtone"><span style="--sw:#c9b590"></span><em>Sandtone</em></label>
+              <label title="Light oak wood-look"><input type="radio" name="finish" value="oak"><span style="--sw:linear-gradient(135deg,#c08a52,#93602f)"></span><em>Light oak</em></label>
               <label title="Walnut wood-look"><input type="radio" name="finish" value="walnut"><span style="--sw:linear-gradient(135deg,#7a4a2c,#4e2c18)"></span><em>Walnut</em></label>
+              <label title="Bronze"><input type="radio" name="finish" value="bronze"><span style="--sw:#4b3b2f"></span><em>Bronze</em></label>
               <label title="Charcoal"><input type="radio" name="finish" value="charcoal"><span style="--sw:#45494d"></span><em>Charcoal</em></label>
               <label title="Black"><input type="radio" name="finish" value="black"><span style="--sw:#1d1f22"></span><em>Black</em></label>
             </div>
           </fieldset>
           <fieldset>
             <legend>Windows</legend>
-            <div class="chips" data-opt="windows">
+            <div class="chips">
               <label><input type="radio" name="windows" value="none"><span>None</span></label>
               <label><input type="radio" name="windows" value="top" checked><span>Top row</span></label>
               <label><input type="radio" name="windows" value="side"><span>Side stack</span></label>
@@ -232,103 +236,113 @@
           </fieldset>
           <fieldset>
             <legend>Size</legend>
-            <div class="chips" data-opt="size">
-              <label><input type="radio" name="size" value="9x7"><span>9 &times; 7 single</span></label>
-              <label><input type="radio" name="size" value="16x7" checked><span>16 &times; 7 double</span></label>
-              <label><input type="radio" name="size" value="10x10"><span>10 &times; 10 shop</span></label>
-              <label><input type="radio" name="size" value="12x12"><span>12 &times; 12 barn</span></label>
+            <div class="chips">
+              <label><input type="radio" name="size" value="9x7"><span>9&times;7 single</span></label>
+              <label><input type="radio" name="size" value="16x7" checked><span>16&times;7 double</span></label>
+              <label><input type="radio" name="size" value="10x10"><span>10&times;10 shop</span></label>
+              <label><input type="radio" name="size" value="12x12"><span>12&times;12 barn</span></label>
             </div>
           </fieldset>
           <fieldset>
             <legend>Your siding</legend>
-            <div class="swatches swatches--sm" data-opt="siding">
-              <label title="Gray lap siding"><input type="radio" name="siding" value="gray" checked><span style="--sw:#5d666e"></span><em>Gray</em></label>
-              <label title="White lap siding"><input type="radio" name="siding" value="white"><span style="--sw:#e7e5df"></span><em>White</em></label>
+            <div class="swatches swatches--sm">
+              <label title="Gray lap"><input type="radio" name="siding" value="gray" checked><span style="--sw:#5d666e"></span><em>Gray</em></label>
+              <label title="White lap"><input type="radio" name="siding" value="white"><span style="--sw:#e7e5df"></span><em>White</em></label>
+              <label title="Tan lap"><input type="radio" name="siding" value="tan"><span style="--sw:#c8b48e"></span><em>Tan</em></label>
+              <label title="Blue lap"><input type="radio" name="siding" value="blue"><span style="--sw:#3e5169"></span><em>Blue</em></label>
+              <label title="Sage lap"><input type="radio" name="siding" value="sage"><span style="--sw:#7b876c"></span><em>Sage</em></label>
+              <label title="Brown board &amp; batten"><input type="radio" name="siding" value="batten"><span style="--sw:#5a4434"></span><em>Batten</em></label>
               <label title="Red steel"><input type="radio" name="siding" value="red"><span style="--sw:#9c2b22"></span><em>Red steel</em></label>
+              <label title="Gray steel"><input type="radio" name="siding" value="steel"><span style="--sw:#7c848b"></span><em>Gray steel</em></label>
               <label title="Black steel"><input type="radio" name="siding" value="black"><span style="--sw:#25292d"></span><em>Black steel</em></label>
             </div>
+            <label class="toggle"><input type="checkbox" name="stone"><span></span>Add stone wainscot</label>
           </fieldset>
-          <div class="ticket">
-            <div class="ticket__head"><span>Build ticket</span><span id="ticket-no">#HD-0000</span></div>
-            <p id="build-summary" aria-live="polite"></p>
-            <a class="btn btn--red btn--block" href="#estimate" id="quote-build">Quote this door <svg><use href="#i-arrow"/></svg></a>
-          </div>
+          <p class="builder__note">Illustration only. Exact styles and colors depend on the door line; we'll walk you through them at the estimate.</p>
         </form>
       </div>
     </div>
   </section>
 
+<!-- BUILD:work -->
   <!-- ============ Work ============ -->
   <section class="section work" id="work">
     <div class="wrap">
-      <header class="section-head section-head--center" data-reveal>
-        <p class="kicker">Our work</p>
+      <header class="section-head section-head--center section-head--tight" data-reveal>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Our work</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>Doors we've hung.</h2>
-        <div class="filters" role="group" aria-label="Filter photos">
-          <button type="button" class="is-on" data-filter="all">All</button>
-          <button type="button" data-filter="home">Homes</button>
-          <button type="button" data-filter="modern">Modern</button>
-          <button type="button" data-filter="shop">Shops &amp; commercial</button>
-        </div>
+        <p>Real doors on homes, shops and pole buildings around Baldwin. Pick a type to see the full set.</p>
       </header>
-      <div class="gallery" id="gallery">
-        <figure class="g g--wide" data-tags="home modern"><button type="button"><img loading="lazy" src="assets/img/photos/wood-look-modern-doors-800.webp" data-full="assets/img/photos/wood-look-modern-doors-1600.webp" alt="Pair of wood-look flush garage doors with long windows" width="800" height="544"></button><figcaption>Wood-look flush doors with long lites</figcaption></figure>
-        <figure class="g" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/almond-carriage-gable-800.webp" data-full="assets/img/photos/almond-carriage-gable-1600.webp" alt="Almond raised-panel garage door with a window row and black strap hinges" width="800" height="448"></button><figcaption>Almond raised panel with window row</figcaption></figure>
-        <figure class="g" data-tags="modern home"><button type="button"><img loading="lazy" src="assets/img/photos/black-glass-modern-800.webp" data-full="assets/img/photos/black-glass-modern-1600.webp" alt="Black modern garage door with eight glass lites on white siding" width="800" height="428"></button><figcaption>Black modern, eight glass lites</figcaption></figure>
-        <figure class="g" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/walnut-raised-panel-pair-800.webp" data-full="assets/img/photos/walnut-raised-panel-pair-1600.webp" alt="Walnut wood-grain raised-panel double and single garage doors on gray siding" width="800" height="440"></button><figcaption>Walnut raised panel, double + single</figcaption></figure>
-        <figure class="g" data-tags="modern home"><button type="button"><img loading="lazy" src="assets/img/photos/charcoal-flush-side-lites-800.webp" data-full="assets/img/photos/charcoal-flush-side-lites-1600.webp" alt="Charcoal flush garage door with a stack of side windows on new construction" width="800" height="416"></button><figcaption>Charcoal flush with side-stack windows</figcaption></figure>
-        <figure class="g g--tall" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/white-carriage-detached-800.webp" data-full="assets/img/photos/white-carriage-detached-1600.webp" alt="White carriage-style garage door on a new detached garage with dark siding" width="800" height="732"></button><figcaption>White carriage door, detached garage</figcaption></figure>
-        <figure class="g g--wide" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/black-shop-walnut-doors-800.webp" data-full="assets/img/photos/black-shop-walnut-doors-1600.webp" alt="Three walnut raised-panel garage doors on a black steel shop building" width="800" height="496"></button><figcaption>Three walnut doors on a black steel shop</figcaption></figure>
-        <figure class="g" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/pole-building-white-door-800.webp" data-full="assets/img/photos/pole-building-white-door-1600.webp" alt="White raised-panel door with window row on a dark steel pole building" width="800" height="424"></button><figcaption>Pole building, white panel door</figcaption></figure>
-        <figure class="g g--tall" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/red-barn-commercial-800.webp" data-full="assets/img/photos/red-barn-commercial-1600.webp" alt="Tall insulated commercial door with four windows on a red steel barn" width="800" height="805"></button><figcaption>Commercial door, red steel barn</figcaption></figure>
-        <figure class="g g--tall" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/red-barn-door-and-entry-800.webp" data-full="assets/img/photos/red-barn-door-and-entry-1600.webp" alt="White commercial overhead door beside a service entry door on a red barn" width="800" height="907"></button><figcaption>Overhead door + service entry</figcaption></figure>
+      <div class="mosaic" data-reveal>
+        <a class="mtile mtile--1" href="work/homes/">
+          <img src="assets/img/photos/almond-carriage-gable-1600.webp" alt="Almond raised-panel garage door with a window row and black strap hinges, stone wainscot and wood gable" loading="lazy" width="1600" height="896">
+          <span class="mtile__text"><strong>Homes</strong><span class="mtile__link">View projects <svg><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="mtile mtile--2" href="work/modern/">
+          <img src="assets/img/photos/wood-look-triple-garage-1600.webp" alt="Three wood-look flush garage doors with stacked horizontal windows on a black steel garage in the woods" loading="lazy" width="1600" height="828">
+          <span class="mtile__text"><strong>Modern</strong><span class="mtile__link">View projects <svg><use href="#i-arrow"/></svg></span></span>
+        </a>
+        <a class="mtile mtile--3" href="work/shops-commercial/">
+          <img src="assets/img/photos/red-barn-commercial-1600.webp" alt="Tall insulated commercial overhead door with four windows on a red steel barn" loading="lazy" width="1600" height="1610">
+          <span class="mtile__text"><strong>Shops &amp; Commercial</strong><span class="mtile__link">View projects <svg><use href="#i-arrow"/></svg></span></span>
+        </a>
       </div>
+      <p class="work-ctas" data-reveal><a class="btn btn--dark" href="work/">View all projects <svg><use href="#i-arrow"/></svg></a><a class="btn btn--red" href="#estimate">Get a free estimate</a></p>
     </div>
   </section>
 
+<!-- /BUILD:work -->
+
   <!-- ============ Troubleshooter ============ -->
   <section class="section trouble" id="trouble">
-    <div class="wrap trouble__grid">
-      <header class="section-head" data-reveal>
-        <p class="kicker">Repairs</p>
+    <div class="wrap">
+      <header class="section-head section-head--center section-head--tight" data-reveal>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Repairs</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>What's your door doing?</h2>
-        <p>Tap the symptom. We'll tell you what's usually behind it, what's safe to check yourself, and when to put the tools down and call.</p>
-        <div class="callout">
-          <b>Safety first.</b> Torsion springs hold enough force to lift the whole door. Never loosen set screws, cut cables, or pry on a spring. That's our job.
-        </div>
+        <p>Pick the symptom. See what's usually behind it, what's safe to check, and when to put the tools down and call.</p>
       </header>
       <div class="diag" data-reveal>
+        <div class="diag__left">
         <div class="diag__list" role="tablist" aria-label="Door symptoms">
-          <button role="tab" type="button" aria-selected="true" data-sym="bang">Loud bang, now it won't lift</button>
-          <button role="tab" type="button" aria-selected="false" data-sym="hum">Opener hums, door doesn't move</button>
-          <button role="tab" type="button" aria-selected="false" data-sym="track">Crooked or off the track</button>
-          <button role="tab" type="button" aria-selected="false" data-sym="reverse">Goes back up before it closes</button>
-          <button role="tab" type="button" aria-selected="false" data-sym="noise">Grinding, squealing, shaking</button>
-          <button role="tab" type="button" aria-selected="false" data-sym="remote">Remote or keypad quit</button>
+            <button role="tab" type="button" aria-selected="true" aria-controls="diag-bang" id="tab-bang" data-sym="bang"><span class="diag__no">01</span><span class="diag__label">Loud bang, now it won’t lift</span><span class="dot dot--call" title="Call us"></span></button>
+            <button role="tab" type="button" aria-selected="false" aria-controls="diag-hum" id="tab-hum" data-sym="hum"><span class="diag__no">02</span><span class="diag__label">Opener hums, door won’t move</span><span class="dot dot--check" title="Check first"></span></button>
+            <button role="tab" type="button" aria-selected="false" aria-controls="diag-track" id="tab-track" data-sym="track"><span class="diag__no">03</span><span class="diag__label">Crooked or off the track</span><span class="dot dot--call" title="Call us"></span></button>
+            <button role="tab" type="button" aria-selected="false" aria-controls="diag-reverse" id="tab-reverse" data-sym="reverse"><span class="diag__no">04</span><span class="diag__label">Goes back up before closing</span><span class="dot dot--check" title="Check first"></span></button>
+            <button role="tab" type="button" aria-selected="false" aria-controls="diag-noise" id="tab-noise" data-sym="noise"><span class="diag__no">05</span><span class="diag__label">Grinding, squealing, shaking</span><span class="dot dot--check" title="Check first"></span></button>
+            <button role="tab" type="button" aria-selected="false" aria-controls="diag-remote" id="tab-remote" data-sym="remote"><span class="diag__no">06</span><span class="diag__label">Remote or keypad quit</span><span class="dot dot--check" title="Check first"></span></button>
         </div>
-        <div class="diag__card" role="tabpanel" id="diag-card" aria-live="polite">
-          <p class="diag__tag"><span id="diag-level" class="lvl"></span></p>
-          <h3 id="diag-title"></h3>
-          <dl>
-            <dt>Usually</dt><dd id="diag-cause"></dd>
-            <dt>Safe to check</dt><dd id="diag-check"></dd>
-            <dt>Don't</dt><dd id="diag-dont"></dd>
-          </dl>
-          <a class="btn btn--red" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> Call 715-928-3002</a>
-        </div>
+        <div class="safety">
+        <b>Safety first</b>
+        <p>Torsion springs hold enough force to lift the whole door. Never loosen set screws, cut cables, or pry on a spring. That's our job.</p>
       </div>
+        </div>
+        <div class="diag__panels" id="diag-panels"></div>
+      </div>
+
     </div>
   </section>
 
   <!-- ============ Why ============ -->
   <section class="section why">
     <div class="wrap why__grid">
-      <div class="why__photo" data-reveal>
-        <img loading="lazy" src="assets/img/photos/almond-carriage-gable-1600.webp" alt="Finished garage with an almond raised-panel door, stone wainscot and wood gable at sunset" width="1600" height="896">
-        <span class="why__tag">Finished &amp; cleaned up</span>
-      </div>
+      <figure class="bat" data-reveal data-state="before">
+        <div class="bat__frame">
+          <img class="bat__img bat__img--before" loading="lazy" src="assets/img/photos/before-after-before-1152.webp" srcset="assets/img/photos/before-after-before-700.webp 700w, assets/img/photos/before-after-before-1152.webp 1152w" sizes="(max-width: 1020px) 100vw, 600px" alt="Before: three worn, stained carriage-style garage doors" width="1152" height="490">
+          <img class="bat__img bat__img--after" loading="lazy" src="assets/img/photos/before-after-after-1152.webp" srcset="assets/img/photos/before-after-after-700.webp 700w, assets/img/photos/before-after-after-1152.webp 1152w" sizes="(max-width: 1020px) 100vw, 600px" alt="After: three new almond raised-panel garage doors on the same garage" width="1152" height="490">
+          <span class="bat__tag" aria-live="polite">Before</span>
+          <div class="bat__door" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b><span class="bat__plate"><svg viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg>Holldorf</span></div>
+        </div>
+        <div class="bat__bar">
+          <div class="bat__switch" role="group" aria-label="Show the before or after photo">
+            <span class="bat__thumb" aria-hidden="true"></span>
+            <button type="button" data-show="before" aria-pressed="true">Before</button>
+            <button type="button" data-show="after" aria-pressed="false">After</button>
+          </div>
+          <figcaption class="bat__cap">Three-door replacement</figcaption>
+        </div>
+      </figure>
       <div data-reveal>
-        <p class="kicker">Why Holldorf</p>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Why Holldorf</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>Local owner. Fair price.<br>Done right the first time.</h2>
         <p class="why__lede">Holldorf Garage Doors is run by Taden Holldorf out of Baldwin. When you call, you’re talking to the guy who’ll be hanging your door.</p>
         <ul class="checks">
@@ -346,7 +360,7 @@
   <section class="section area" id="area">
     <div class="wrap area__grid">
       <div data-reveal>
-        <p class="kicker">Service area</p>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Service area</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>Based in Baldwin.<br>Working all over western Wisconsin.</h2>
         <p>We're out of Baldwin in St. Croix County and regularly work the towns around it. Don't see yours? Call anyway. If we can get there, we'll come.</p>
         <ul class="towns">
@@ -361,76 +375,121 @@
 
   <div class="hazard" aria-hidden="true"></div>
 
-  <!-- ============ Estimate ============ -->
+<!-- BUILD:estimate -->
+  <!-- ============ Estimate (shared: homepage + /free-estimate/) ============ -->
   <section class="section estimate" id="estimate">
     <div class="wrap estimate__grid">
       <div class="estimate__info" data-reveal>
-        <p class="kicker">Free estimate</p>
+        <p class="kicker"><span class="kick"><svg class="kick__roof" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1 19 50 1.5 99 19"/></svg><span class="kick__bay"><span class="kick__text">Free estimate</span><span class="kick__door" aria-hidden="true"></span></span></span></p>
         <h2>Tell us about the door.</h2>
-        <p>Fill this out and we'll get back to you to set up a time. In a hurry, or is the door stuck right now? Call.</p>
-        <a class="big-phone" href="tel:+17159283002"><svg><use href="#i-phone"/></svg>715-928-3002</a>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
-          <li><span>Owner</span>Taden Holldorf</li>
-          <li><span>Based in</span>Baldwin, WI 54002</li>
-          <li><span>Serving</span>Residential &amp; commercial</li>
-        </ul>
+        <p>Start with your name and number, then answer a few quick questions so we show up with the right parts and a real number. Takes about a minute. Door stuck right now? Just call.</p>
+        <div class="cplate">
+          <i class="cplate__rivet cplate__rivet--tl"></i><i class="cplate__rivet cplate__rivet--tr"></i><i class="cplate__rivet cplate__rivet--bl"></i><i class="cplate__rivet cplate__rivet--br"></i>
+          <p class="cplate__label"><svg class="cplate__mark" viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg>Call Taden direct</p>
+          <a class="cplate__phone" href="tel:+17159283002"><svg><use href="#i-phone"/></svg>715-928-3002</a>
+          <ul class="cplate__list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Email</span><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4.5 4.2-7 8-7s7 2.5 8 7" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Owner</span>Taden Holldorf</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><span>Based in</span>Baldwin, WI 54002</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v10H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 21v-6h8v6M8 18h8" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Serving</span>Residential &amp; commercial</li>
+          </ul>
+        </div>
+        <ol class="howto">
+          <li><b>01</b><span>Send your door plan</span></li>
+          <li><b>02</b><span>Taden calls you back</span></li>
+          <li><b>03</b><span>Free look &amp; written quote</span></li>
+        </ol>
       </div>
-      <form class="estimate__form" id="estimate-form" novalidate data-reveal>
-        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field-row">
-          <label class="field"><span>Name *</span><input name="name" autocomplete="name" required></label>
-          <label class="field"><span>Phone *</span><input name="phone" type="tel" autocomplete="tel" required></label>
-        </div>
-        <div class="field-row">
-          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
-          <label class="field"><span>Town</span><input name="town" autocomplete="address-level2" placeholder="Baldwin"></label>
-        </div>
-        <label class="field"><span>What do you need? *</span>
-          <select name="service" required>
-            <option value="">Choose one</option>
-            <option>New door installation</option>
-            <option>Replace an existing door</option>
-            <option>Spring or cable repair</option>
-            <option>Door off track / damaged panel</option>
-            <option>Opener install or repair</option>
-            <option>Maintenance / tune-up</option>
-            <option>Commercial or pole building door</option>
-            <option>Something else</option>
-          </select>
-        </label>
+
+      <!-- Contact first, then the Door Planner. Follow-up questions depend on the job picked
+           (built in estimate.js); every question has an "Other" option. -->
+      <form class="estimate__form planner" id="estimate-form" novalidate data-reveal data-thanks="thank-you.html">
+        <fieldset class="contact-block">
+          <legend>Let's start with you.</legend>
+          <div class="field-row">
+            <label class="field"><span>Name *</span><input name="name" autocomplete="name" required aria-describedby="err-name"><em class="field-err" id="err-name"></em></label>
+            <label class="field"><span>Phone *</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="err-phone"><em class="field-err" id="err-phone"></em></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Town</span><input name="town" autocomplete="address-level2" placeholder="Baldwin"></label>
+            <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" aria-describedby="err-email"><em class="field-err" id="err-email"></em></label>
+          </div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </fieldset>
+
         <div class="build-pick" id="build-pick" hidden>
           <span>Door Builder pick</span>
           <p></p>
           <button type="button" class="link-btn" id="build-clear">Remove</button>
           <input type="hidden" name="door_builder">
         </div>
-        <label class="field"><span>Details</span><textarea name="details" rows="4" placeholder="Door size, what's going on, best time to reach you..."></textarea></label>
-        <button class="btn btn--red btn--block" type="submit">Send my request <svg><use href="#i-arrow"/></svg></button>
-        <p class="form-msg" id="form-msg" role="status"></p>
+
+        <div class="planner-block">
+          <div class="planner-top">
+            <p class="planner-kicker">Door planner <span>(optional)</span></p>
+            <p class="meter-label" aria-live="polite">Step 1</p>
+          </div>
+          <div class="meter" aria-hidden="true"><div class="meter-door"></div></div>
+
+          <fieldset class="q on" data-key="type" data-single data-label="Job">
+            <legend>What do you need?</legend>
+            <div class="opts opts-icon">
+              <button type="button" class="opt" data-v="New door"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18 24 6l18 12v24H6z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 24h24v18H12z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 30h24M12 36h24" stroke="currentColor" stroke-width="2.5"/></svg><strong>New door</strong><span>New build or new garage</span></button>
+              <button type="button" class="opt" data-v="Replace my door"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V14h32v26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 20h20M14 27h20M14 34h20" stroke="currentColor" stroke-width="2.5"/><path d="m30 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 10h24" stroke="currentColor" stroke-width="3"/></svg><strong>Replace my door</strong><span>Swap out the old one</span></button>
+              <button type="button" class="opt" data-v="Repair"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L6 35l7 7 15-15A10 10 0 0 0 42 18l-6 6-6-2-2-6 6-6a10 10 0 0 0-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><strong>Repair</strong><span>Springs, cables, tracks</span></button>
+              <button type="button" class="opt" data-v="Opener"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="8" width="20" height="12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M4 14h12M26 20v6" stroke="currentColor" stroke-width="3"/><rect x="18" y="26" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="3" fill="currentColor"/></svg><strong>Opener</strong><span>Install, repair, convert</span></button>
+              <button type="button" class="opt" data-v="Commercial or pole building"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 42V16L24 6l20 10v26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 42V22h20v20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 28h20M14 34h20" stroke="currentColor" stroke-width="2.5"/></svg><strong>Shop or commercial</strong><span>Pole buildings, barns, shops</span></button>
+              <button type="submit" class="opt opt-send send-now"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><strong>Just send my info</strong><span>Skip the questions. Taden will call you.</span></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="q q-final" data-key="final">
+            <legend>Here's your door plan.</legend>
+            <div class="plan-card">
+              <dl class="plan-list"></dl>
+              <div>
+                <p class="plan-head">What happens next</p>
+                <ul class="plan-expect"></ul>
+              </div>
+            </div>
+            <label class="field final-note"><span class="final-label">Anything else we should know?</span><textarea name="details" rows="3" placeholder="Door size, what's going on, best time to reach you..."></textarea></label>
+            <input type="hidden" name="door_plan">
+            <button class="btn btn--red btn--block send-plan" type="submit">Send my door plan <svg><use href="#i-arrow"/></svg></button>
+          </fieldset>
+
+          <div class="planner-nav">
+            <button type="button" class="link-btn p-back" disabled>Back</button>
+            <button type="button" class="btn btn--dark btn--sm p-next" disabled>Next</button>
+          </div>
+        </div>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
-</main>
 
+<!-- /BUILD:estimate --></main>
+
+<!-- BUILD:footer -->
 <footer class="site-footer">
   <div class="wrap footer__grid">
-    <div>
-      <a class="footer__logo" href="#top"><img src="assets/img/logo-400.webp" alt="Holldorf Garage Doors" width="400" height="352" loading="lazy"></a>
-      <p class="footer__blurb">Garage door sales, installation and repairs for homes, shops and pole buildings. Baldwin, Wisconsin.</p>
+    <div class="footer__brand">
+      <a class="footer__logo" href="#top" aria-label="Holldorf Garage Doors, home"><span class="hd-lockup"><svg class="hd-lockup__icon" viewBox="0 0 64 56" aria-hidden="true"><path class="hd-mark__house" d="M32 2.5 1.5 22.5V29H6v25h52V29h4.5v-6.5Z"/><path class="hd-mark__trim" d="M32 9.5 8.5 25h47Z"/><rect class="hd-mark__door" x="14" y="30" width="36" height="24"/><g class="hd-mark__panels"><rect x="17" y="33" width="30" height="3.2"/><rect x="17" y="38" width="30" height="3.2"/><rect x="17" y="43" width="30" height="3.2"/><rect x="17" y="48" width="30" height="3.2"/></g></svg><span class="hd-lockup__words"><span class="hd-lockup__name">Holldorf</span><span class="hd-lockup__sub">Garage Doors LLC</span></span></span></a>
+      <p class="footer__blurb">Garage door sales, installation and repairs. Baldwin, WI.</p>
     </div>
-    <div>
-      <h4>Call or write</h4>
-      <p><a href="tel:+17159283002">715-928-3002</a><br><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a><br><a href="https://www.facebook.com/p/Holldorf-Garage-Doors-LLC-61573275539430/">Facebook</a></p>
-    </div>
-    <div>
-      <h4>Jump to</h4>
-      <p><a href="#services">Services</a><br><a href="#builder">Door Builder</a><br><a href="#work">Our Work</a><br><a href="#trouble">Repairs</a></p>
-    </div>
+    <ul class="footer__list">
+      <li><a href="tel:+17159283002">715-928-3002</a></li>
+      <li><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
+      <li><a href="https://www.facebook.com/p/Holldorf-Garage-Doors-LLC-61573275539430/">Facebook</a></li>
+    </ul>
+    <ul class="footer__list footer__list--2">
+      <li><a href="work/">Our work</a></li><li><a href="work/homes/">Homes</a></li><li><a href="work/modern/">Modern</a></li><li><a href="work/shops-commercial/">Shops &amp; Commercial</a></li>
+      <li><a href="#trouble">Repairs</a></li>
+      <li><a href="free-estimate/">Free estimate</a></li>
+    </ul>
   </div>
   <div class="wrap footer__base">
     <span>&copy; <span id="yr">2026</span> Holldorf Garage Doors LLC</span>
-    <a href="?intro" class="replay">Open the door again &uarr;</a>
+    <a href="./?intro" class="replay">Open the door again &uarr;</a>
   </div>
 </footer>
 
@@ -443,7 +502,9 @@
   <button class="lb-nav lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
 </div>
 
-<script src="assets/js/builder.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/builder.js?v=202611181426" defer></script>
+<script src="assets/js/main.js?v=202611181426" defer></script>
+<script src="assets/js/estimate.js?v=202611181426" defer></script>
+<!-- /BUILD:footer -->
 </body>
 </html>

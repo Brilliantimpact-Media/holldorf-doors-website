@@ -3,23 +3,39 @@
 Website for Holldorf Garage Doors LLC (Baldwin, WI). Built by Brilliant Impact.
 Static HTML/CSS/JS, no build step. One page plus `thank-you.html` and `404.html`.
 
-## Files
+## Pages
 
-| Path | What it is |
+| URL | Source |
 |---|---|
-| `index.html` | The whole site: intro, hero, services, Door Builder, gallery, repairs troubleshooter, service area, estimate form |
-| `assets/css/site.css` | All styles (colors and fonts are the variables at the top) |
-| `assets/js/main.js` | Garage-door intro, nav, gallery filter + lightbox, troubleshooter text, estimate form |
-| `assets/js/builder.js` | Door Builder: draws the door preview as SVG |
-| `assets/img/original/` | Photos and logo exactly as received (logo from their Facebook page) |
-| `assets/img/logo-*.webp` | Logo with the white background cut out |
-| `assets/img/photos/` | Cropped, color-corrected WebP versions (800 and 1600 wide) |
-| `tools/polish_photos.py` | Regenerates `photos/` and `og-image.jpg` from `original/` (needs Pillow) |
+| `/` | `index.html` (hand-written; shared blocks injected by the build) |
+| `/work/` and `/work/<homes, modern, shops-commercial>/` | generated landing pages (SEO title, meta, FAQ + schema) |
+| `/free-estimate/` | generated; the estimate form + Door Planner |
+| `/thank-you.html`, `/404.html` | hand-written |
+
+## Editing
+
+Shared content lives in one place, then rebuild:
+
+- `data/work.json`: photos, captions, tags, and each work page's SEO copy and FAQs
+- `partials/estimate.html`: the estimate form (homepage and `/free-estimate/`)
+- `tools/hero_drawing.py`: the hero's shop-drawing SVG
+- `tools/build.py`: header, footer, gallery and page templates
+
+```bash
+python3 tools/build.py
+```
+
+The build rewrites the generated pages and refreshes the blocks in `index.html` between
+`<!-- BUILD:name -->` markers. Edit the rest of `index.html` directly.
+
+Scripts: `main.js` (every page: intro, nav, section doors, gallery, troubleshooter),
+`builder.js` (Door Builder), `estimate.js` (estimate form + Door Planner).
+Photos: `tools/polish_photos.py` regenerates `assets/img/photos/` from `assets/img/original/`.
 
 ## Garage-door intro
 
-Plays the first time someone opens the site in a browser session, then is skipped
-until the tab is closed. Click, Esc, Enter or Space skips it. Add `?intro` to the URL to
+Plays every time the homepage loads, refreshes included. It's skipped when someone
+follows a section link like `/#services` from another page. Click, Esc, Enter or Space skips it. Add `?intro` to the URL to
 replay it (the footer has an "Open the door again" link). Visitors with reduced motion
 turned on get an instant open.
 

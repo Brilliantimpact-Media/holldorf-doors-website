@@ -25,6 +25,8 @@ PHOTOS = {
     "7.jpg":  ("pole-building-white-door",  (300, 1360)),
     "4.jpg":  ("red-barn-commercial",       (250, 1760)),
     "3.jpg":  ("red-barn-door-and-entry",   (0, 1700)),
+    # from the Facebook page (Sept 20 post)
+    "fb-wood-triple.jpg": ("wood-look-triple-garage", (190, 1250)),
 }
 
 
@@ -44,10 +46,23 @@ def main():
             r = im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
             r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
         print(f"{src:7} -> {name}  {im.width}x{im.height}")
+    before_after()
     # Social share image (1200x630) from the hero photo
     hero = polish(Image.open(SRC / "8.jpg").convert("RGB"))
     ImageOps.fit(hero, (1200, 630), Image.LANCZOS, centering=(0.5, 0.45)).save(
         ROOT / "assets/img/og-image.jpg", "JPEG", quality=84, optimize=True, progressive=True)
+
+
+def before_after():
+    """Aug 2 Facebook before/after (phone story frames): crop the photo band below his
+    BEFORE/After label boxes. Shown with a Before/After toggle, so no alignment needed."""
+    box = (0, 800, 1152, 1290)
+    for name, src in (("before-after-before", "fb-ba-b.jpg"), ("before-after-after", "fb-ba-a.jpg")):
+        im = polish(Image.open(SRC / src).convert("RGB").crop(box))
+        for w in (1152, 700):
+            r = im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+            r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=82, method=6)
+        print("before/after ->", name, im.size)
 
 
 if __name__ == "__main__":
