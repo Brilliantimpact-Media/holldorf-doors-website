@@ -1,0 +1,54 @@
+"""Polish the job-site photos for the web.
+
+Reads assets/img/original/*.jpg, crops away most of the bare dirt / house-wrap,
+lifts contrast and color a touch, sharpens, and writes WebP at two widths plus
+one JPG for social sharing.
+
+    python3 tools/polish_photos.py
+"""
+from pathlib import Path
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "assets/img/original"
+OUT = ROOT / "assets/img/photos"
+
+# original file -> (web name, crop box as (top, bottom) in source pixels)
+PHOTOS = {
+    "8.jpg":  ("wood-look-modern-doors",    (0, 1360)),
+    "2.jpg":  ("almond-carriage-gable",     (60, 1180)),
+    "5.jpg":  ("walnut-raised-panel-pair",  (300, 1400)),
+    "10.jpg": ("black-glass-modern",        (230, 1300)),
+    "6.jpg":  ("charcoal-flush-side-lites", (250, 1290)),
+    "1.jpg":  ("white-carriage-detached",   (230, 1260)),
+    "9.jpg":  ("black-shop-walnut-doors",   (0, 1240)),
+    "7.jpg":  ("pole-building-white-door",  (300, 1360)),
+    "4.jpg":  ("red-barn-commercial",       (250, 1760)),
+    "3.jpg":  ("red-barn-door-and-entry",   (0, 1700)),
+}
+
+
+def polish(im: Image.Image) -> Image.Image:
+    im = ImageOps.autocontrast(im, cutoff=0.4, preserve_tone=True)
+    im = ImageEnhance.Contrast(im).enhance(1.06)
+    im = ImageEnhance.Color(im).enhance(1.08)
+    return im.filter(ImageFilter.UnsharpMask(radius=1.6, percent=55, threshold=3))
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    for src, (name, (top, bottom)) in PHOTOS.items():
+        im = ImageOps.exif_transpose(Image.open(SRC / src)).convert("RGB")
+        im = polish(im.crop((0, top, im.width, min(bottom, im.height))))
+        for w in (1600, 800):
+            r = im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+            r.save(OUT / f"{name}-{w}.webp", "WEBP", quality=80, method=6)
+        print(f"{src:7} -> {name}  {im.width}x{im.height}")
+    # Social share image (1200x630) from the hero photo
+    hero = polish(Image.open(SRC / "8.jpg").convert("RGB"))
+    ImageOps.fit(hero, (1200, 630), Image.LANCZOS, centering=(0.5, 0.45)).save(
+        ROOT / "assets/img/og-image.jpg", "JPEG", quality=84, optimize=True, progressive=True)
+
+
+if __name__ == "__main__":
+    main()

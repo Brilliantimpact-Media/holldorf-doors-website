@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holldorf Garage Doors | Garage Door Installation &amp; Repair in Baldwin, WI</title>
+<meta name="description" content="New garage doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Residential and commercial. Free estimates: 715-928-3002.">
+<meta name="theme-color" content="#16191c">
+<!-- Form service address (Formspree, Web3Forms, etc.). Leave empty and the form opens an email instead. -->
+<meta name="hd-form-endpoint" content="">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Holldorf Garage Doors | Baldwin, WI">
+<meta property="og:description" content="New doors, repairs and openers for homes, shops and pole buildings. Free estimates.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="preload" as="image" href="assets/img/photos/wood-look-modern-doors-1600.webp">
+<script>
+  /* Decide on the garage-door intro before first paint so there is no flash. */
+  (function () {
+    var d = document.documentElement, seen = false;
+    d.classList.add('js');
+    try { seen = sessionStorage.getItem('hd-intro') === '1'; } catch (e) {}
+    if (location.search.indexOf('intro') > -1) seen = false;
+    if (!seen && !location.hash) d.classList.add('intro');
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Holldorf Garage Doors LLC",
+  "description": "Residential and commercial garage door installation, repair, and opener service.",
+  "telephone": "+1-715-928-3002",
+  "email": "holldorfgaragedoors@gmail.com",
+  "image": "assets/img/og-image.jpg",
+  "address": {"@type": "PostalAddress", "addressLocality": "Baldwin", "addressRegion": "WI", "postalCode": "54002", "addressCountry": "US"},
+  "areaServed": ["Baldwin, WI", "St. Croix County, WI", "Pierce County, WI", "Dunn County, WI"],
+  "priceRange": "$$"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ Garage door intro ============ -->
+<div id="door-intro" aria-hidden="true">
+  <div class="di-opening">
+    <div class="di-light"></div>
+    <div class="di-door">
+      <div class="di-sections"></div>
+      <div class="di-badge">
+        <svg class="logo-mark" viewBox="0 0 64 56"><use href="#mark"/></svg>
+        <span class="di-name">Holldorf</span>
+        <span class="di-sub">Garage Doors &middot; Baldwin, WI</span>
+      </div>
+      <div class="di-seal"></div>
+    </div>
+  </div>
+  <div class="di-header"><span class="di-led"></span><span>Opening up</span></div>
+  <button class="di-skip" type="button" tabindex="-1">Skip &rsaquo;</button>
+</div>
+<script>
+  /* Build the door's panels right away (runs before first paint). */
+  (function () {
+    if (!document.documentElement.classList.contains('intro')) return;
+    var box = document.querySelector('#door-intro .di-sections'), html = '';
+    for (var s = 0; s < 5; s++) {
+      html += '<div class="di-sec' + (s === 0 ? ' di-sec--glass' : '') + '">';
+      for (var p = 0; p < 8; p++) html += '<i></i>';
+      html += '</div>';
+    }
+    box.innerHTML = html;
+  })();
+</script>
+
+<!-- Shared SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 64 56">
+    <path d="M32 2 2 22v6h4v26h52V28h4v-6z" fill="currentColor"/>
+    <path d="M14 30h36v22H14z" fill="var(--mark-door, #16191c)"/>
+    <path d="M16 33h32v3H16zm0 5.5h32v3H16zm0 5.5h32v3H16z" fill="currentColor" opacity=".9"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="m4 12.5 5 5L20 6.5"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <span><b>Free estimates</b> &middot; Residential &amp; commercial &middot; Baldwin, WI</span>
+    <a href="tel:+17159283002"><svg><use href="#i-phone"/></svg> 715-928-3002</a>
+  </div>
+</div>
+
+<header class="site-header" id="top">
+  <div class="wrap site-header__in">
+    <a class="brand" href="#top" aria-label="Holldorf Garage Doors, home">
+      <svg class="logo-mark" viewBox="0 0 64 56" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__text"><b>Holldorf</b><small>Garage Doors LLC</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#builder">Door Builder</a>
+      <a href="#work">Our Work</a>
+      <a href="#trouble">Repairs</a>
+      <a href="#estimate">Contact</a>
+    </nav>
+    <a class="btn btn--amber btn--sm header-cta" href="tel:+17159283002"><svg><use href="#i-phone"/></svg><span>Call now</span></a>
+    <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <picture class="hero__bg">
+      <source media="(max-width: 700px)" srcset="assets/img/photos/wood-look-modern-doors-800.webp">
+      <img src="assets/img/photos/wood-look-modern-doors-1600.webp" alt="Two wood-look garage doors with long windows, installed by Holldorf Garage Doors" width="1600" height="1088">
+    </picture>
+    <div class="wrap hero__in">
+      <p class="kicker hero__kicker"><span class="stamp">Baldwin, WI</span> Garage doors &middot; Openers &middot; Repair</p>
+      <h1 class="hero__title">Garage doors,<br><span>hung right.</span></h1>
+      <p class="hero__lede">New doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Fair prices, straight answers, and the estimate is free.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--amber" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> 715-928-3002</a>
+        <a class="btn btn--ghost" href="#estimate">Get a free estimate <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <ul class="hero__strip wrap" aria-label="At a glance">
+      <li><b>Residential</b><span>Attached &amp; detached garages</span></li>
+      <li><b>Commercial</b><span>Shops, barns &amp; pole buildings</span></li>
+      <li><b>Repairs</b><span>Springs, cables, off-track doors</span></li>
+      <li><b>Openers</b><span>Install, repair &amp; conversions</span></li>
+    </ul>
+  </section>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- ============ Services ============ -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="kicker">What we do</p>
+        <h2>Every part of the door,<br>from the springs up.</h2>
+        <p>One call covers it: picking a new door, hanging it, wiring the opener, or getting a stuck door back on track.</p>
+      </header>
+      <div class="svc-grid">
+        <article class="svc" data-reveal>
+          <span class="svc__no">01</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18 24 6l18 12v24H6z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 24h24v18H12z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 30h24M12 36h24" stroke="currentColor" stroke-width="2.5"/></svg>
+          <h3>New door installation</h3>
+          <p>Residential and commercial doors, sized and hung on new construction. Raised panel, carriage, flush modern, wood-look and full glass.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__no">02</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V14h32v26" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 20h20M14 27h20M14 34h20" stroke="currentColor" stroke-width="2.5"/><path d="m30 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 10h24" stroke="currentColor" stroke-width="3"/></svg>
+          <h3>Door replacement</h3>
+          <p>Tired, dented or drafty door? We pull the old one, haul it off, and swap in an insulated door that fits the house.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__no">03</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h6m28 0h6" stroke="currentColor" stroke-width="3"/><path d="M10 24c0-6 3-6 3 0s3 6 3 0 3-6 3 0 3 6 3 0 3-6 3 0 3 6 3 0 3-6 3 0 3 6 3 0" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          <h3>Spring &amp; cable repair</h3>
+          <p>Broken torsion and extension springs, frayed or snapped cables, worn rollers. Springs are under serious tension, so leave them to us.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__no">04</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6v36M38 6v36" stroke="currentColor" stroke-width="3"/><rect x="14" y="12" width="20" height="9" fill="none" stroke="currentColor" stroke-width="2.6" transform="rotate(-8 24 16)"/><rect x="14" y="26" width="20" height="9" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          <h3>Off-track &amp; panel repair</h3>
+          <p>Doors that hang crooked, jump the track, bind or scrape. We straighten track, replace damaged sections and get it running square.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__no">05</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="8" width="20" height="12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M4 14h12M26 20v6" stroke="currentColor" stroke-width="3"/><rect x="18" y="26" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="3" fill="currentColor"/></svg>
+          <h3>Openers &amp; conversions</h3>
+          <p>Opener installs, repairs and replacements, keypads and remotes, and manual-to-automatic conversions for doors you still lift by hand.</p>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__no">06</span>
+          <svg class="svc__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L6 35l7 7 15-15A10 10 0 0 0 42 18l-6 6-6-2-2-6 6-6a10 10 0 0 0-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          <h3>Maintenance &amp; emergency calls</h3>
+          <p>Tune-ups that catch worn parts before they quit, and help when a door is stuck open, stuck shut, or the car is trapped inside.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Door builder ============ -->
+  <section class="section builder" id="builder">
+    <div class="wrap">
+      <header class="section-head section-head--light" data-reveal>
+        <p class="kicker">Door Builder</p>
+        <h2>Build your door before we hang it.</h2>
+        <p>Pick a style, finish and windows and see it on your building. Send the build with your estimate request and we'll price it out.</p>
+      </header>
+      <div class="builder__grid" data-reveal>
+        <div class="builder__stage">
+          <svg id="door-preview" viewBox="0 0 400 260" role="img" aria-label="Preview of the door you built"></svg>
+          <p class="builder__note">Illustration only. Exact styles, colors and windows depend on the door line, and we'll walk you through them at the estimate.</p>
+        </div>
+        <form class="builder__controls" id="builder-form" onsubmit="return false">
+          <fieldset>
+            <legend>Style</legend>
+            <div class="chips" data-opt="style">
+              <label><input type="radio" name="style" value="raised" checked><span>Raised panel</span></label>
+              <label><input type="radio" name="style" value="carriage"><span>Carriage house</span></label>
+              <label><input type="radio" name="style" value="flush"><span>Flush modern</span></label>
+              <label><input type="radio" name="style" value="ribbed"><span>Commercial</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Finish</legend>
+            <div class="swatches" data-opt="finish">
+              <label title="White"><input type="radio" name="finish" value="white" checked><span style="--sw:#f3f2ee"></span><em>White</em></label>
+              <label title="Almond"><input type="radio" name="finish" value="almond"><span style="--sw:#e6dcc6"></span><em>Almond</em></label>
+              <label title="Walnut wood-look"><input type="radio" name="finish" value="walnut"><span style="--sw:linear-gradient(135deg,#7a4a2c,#4e2c18)"></span><em>Walnut</em></label>
+              <label title="Charcoal"><input type="radio" name="finish" value="charcoal"><span style="--sw:#45494d"></span><em>Charcoal</em></label>
+              <label title="Black"><input type="radio" name="finish" value="black"><span style="--sw:#1d1f22"></span><em>Black</em></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Windows</legend>
+            <div class="chips" data-opt="windows">
+              <label><input type="radio" name="windows" value="none"><span>None</span></label>
+              <label><input type="radio" name="windows" value="top" checked><span>Top row</span></label>
+              <label><input type="radio" name="windows" value="side"><span>Side stack</span></label>
+              <label><input type="radio" name="windows" value="full"><span>Full view</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Size</legend>
+            <div class="chips" data-opt="size">
+              <label><input type="radio" name="size" value="9x7"><span>9 &times; 7 single</span></label>
+              <label><input type="radio" name="size" value="16x7" checked><span>16 &times; 7 double</span></label>
+              <label><input type="radio" name="size" value="10x10"><span>10 &times; 10 shop</span></label>
+              <label><input type="radio" name="size" value="12x12"><span>12 &times; 12 barn</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Your siding</legend>
+            <div class="swatches swatches--sm" data-opt="siding">
+              <label title="Gray lap siding"><input type="radio" name="siding" value="gray" checked><span style="--sw:#5d666e"></span><em>Gray</em></label>
+              <label title="White lap siding"><input type="radio" name="siding" value="white"><span style="--sw:#e7e5df"></span><em>White</em></label>
+              <label title="Red steel"><input type="radio" name="siding" value="red"><span style="--sw:#9c2b22"></span><em>Red steel</em></label>
+              <label title="Black steel"><input type="radio" name="siding" value="black"><span style="--sw:#25292d"></span><em>Black steel</em></label>
+            </div>
+          </fieldset>
+          <div class="ticket">
+            <div class="ticket__head"><span>Build ticket</span><span id="ticket-no">#HD-0000</span></div>
+            <p id="build-summary" aria-live="polite"></p>
+            <a class="btn btn--amber btn--block" href="#estimate" id="quote-build">Quote this door <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Work ============ -->
+  <section class="section work" id="work">
+    <div class="wrap">
+      <header class="section-head section-head--row" data-reveal>
+        <div>
+          <p class="kicker">Our work</p>
+          <h2>Doors we've hung.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter photos">
+          <button type="button" class="is-on" data-filter="all">All</button>
+          <button type="button" data-filter="home">Homes</button>
+          <button type="button" data-filter="modern">Modern</button>
+          <button type="button" data-filter="shop">Shops &amp; commercial</button>
+        </div>
+      </header>
+      <div class="gallery" id="gallery">
+        <figure class="g g--wide" data-tags="home modern"><button type="button"><img loading="lazy" src="assets/img/photos/wood-look-modern-doors-800.webp" data-full="assets/img/photos/wood-look-modern-doors-1600.webp" alt="Pair of wood-look flush garage doors with long windows" width="800" height="544"></button><figcaption>Wood-look flush doors with long lites</figcaption></figure>
+        <figure class="g" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/almond-carriage-gable-800.webp" data-full="assets/img/photos/almond-carriage-gable-1600.webp" alt="Almond raised-panel garage door with a window row and black strap hinges" width="800" height="448"></button><figcaption>Almond raised panel with window row</figcaption></figure>
+        <figure class="g" data-tags="modern home"><button type="button"><img loading="lazy" src="assets/img/photos/black-glass-modern-800.webp" data-full="assets/img/photos/black-glass-modern-1600.webp" alt="Black modern garage door with eight glass lites on white siding" width="800" height="428"></button><figcaption>Black modern, eight glass lites</figcaption></figure>
+        <figure class="g" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/walnut-raised-panel-pair-800.webp" data-full="assets/img/photos/walnut-raised-panel-pair-1600.webp" alt="Walnut wood-grain raised-panel double and single garage doors on gray siding" width="800" height="440"></button><figcaption>Walnut raised panel, double + single</figcaption></figure>
+        <figure class="g" data-tags="modern home"><button type="button"><img loading="lazy" src="assets/img/photos/charcoal-flush-side-lites-800.webp" data-full="assets/img/photos/charcoal-flush-side-lites-1600.webp" alt="Charcoal flush garage door with a stack of side windows on new construction" width="800" height="416"></button><figcaption>Charcoal flush with side-stack windows</figcaption></figure>
+        <figure class="g g--tall" data-tags="home"><button type="button"><img loading="lazy" src="assets/img/photos/white-carriage-detached-800.webp" data-full="assets/img/photos/white-carriage-detached-1600.webp" alt="White carriage-style garage door on a new detached garage with dark siding" width="800" height="732"></button><figcaption>White carriage door, detached garage</figcaption></figure>
+        <figure class="g g--wide" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/black-shop-walnut-doors-800.webp" data-full="assets/img/photos/black-shop-walnut-doors-1600.webp" alt="Three walnut raised-panel garage doors on a black steel shop building" width="800" height="496"></button><figcaption>Three walnut doors on a black steel shop</figcaption></figure>
+        <figure class="g" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/pole-building-white-door-800.webp" data-full="assets/img/photos/pole-building-white-door-1600.webp" alt="White raised-panel door with window row on a dark steel pole building" width="800" height="424"></button><figcaption>Pole building, white panel door</figcaption></figure>
+        <figure class="g g--tall" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/red-barn-commercial-800.webp" data-full="assets/img/photos/red-barn-commercial-1600.webp" alt="Tall insulated commercial door with four windows on a red steel barn" width="800" height="805"></button><figcaption>Commercial door, red steel barn</figcaption></figure>
+        <figure class="g g--tall" data-tags="shop"><button type="button"><img loading="lazy" src="assets/img/photos/red-barn-door-and-entry-800.webp" data-full="assets/img/photos/red-barn-door-and-entry-1600.webp" alt="White commercial overhead door beside a service entry door on a red barn" width="800" height="907"></button><figcaption>Overhead door + service entry</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Troubleshooter ============ -->
+  <section class="section trouble" id="trouble">
+    <div class="wrap trouble__grid">
+      <header class="section-head" data-reveal>
+        <p class="kicker">Repairs</p>
+        <h2>What's your door doing?</h2>
+        <p>Tap the symptom. We'll tell you what's usually behind it, what's safe to check yourself, and when to put the tools down and call.</p>
+        <div class="callout">
+          <b>Safety first.</b> Torsion springs hold enough force to lift the whole door. Never loosen set screws, cut cables, or pry on a spring. That's our job.
+        </div>
+      </header>
+      <div class="diag" data-reveal>
+        <div class="diag__list" role="tablist" aria-label="Door symptoms">
+          <button role="tab" type="button" aria-selected="true" data-sym="bang">Loud bang, now it won't lift</button>
+          <button role="tab" type="button" aria-selected="false" data-sym="hum">Opener hums, door doesn't move</button>
+          <button role="tab" type="button" aria-selected="false" data-sym="track">Crooked or off the track</button>
+          <button role="tab" type="button" aria-selected="false" data-sym="reverse">Goes back up before it closes</button>
+          <button role="tab" type="button" aria-selected="false" data-sym="noise">Grinding, squealing, shaking</button>
+          <button role="tab" type="button" aria-selected="false" data-sym="remote">Remote or keypad quit</button>
+        </div>
+        <div class="diag__card" role="tabpanel" id="diag-card" aria-live="polite">
+          <p class="diag__tag"><span id="diag-level" class="lvl"></span></p>
+          <h3 id="diag-title"></h3>
+          <dl>
+            <dt>Usually</dt><dd id="diag-cause"></dd>
+            <dt>Safe to check</dt><dd id="diag-check"></dd>
+            <dt>Don't</dt><dd id="diag-dont"></dd>
+          </dl>
+          <a class="btn btn--amber" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> Call 715-928-3002</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Why ============ -->
+  <section class="section why">
+    <div class="wrap why__grid">
+      <div class="why__photo" data-reveal>
+        <img loading="lazy" src="assets/img/photos/almond-carriage-gable-1600.webp" alt="Finished garage with an almond raised-panel door, stone wainscot and wood gable at sunset" width="1600" height="896">
+        <span class="why__tag">Finished &amp; cleaned up</span>
+      </div>
+      <div data-reveal>
+        <p class="kicker">Why Holldorf</p>
+        <h2>Local crew. Fair price.<br>Door done right.</h2>
+        <ul class="checks">
+          <li><svg><use href="#i-check"/></svg><div><b>Free, straight estimates.</b> You'll know what it costs before we start, with no surprise add-ons.</div></li>
+          <li><svg><use href="#i-check"/></svg><div><b>Homes and hard-working buildings.</b> Attached garages, detached garages, shops, barns and pole buildings.</div></li>
+          <li><svg><use href="#i-check"/></svg><div><b>Install and repair, one outfit.</b> The folks who hang your door are the ones you call when it needs work.</div></li>
+          <li><svg><use href="#i-check"/></svg><div><b>Clean finish.</b> Trimmed out, adjusted, tested, and the old door hauled away.</div></li>
+        </ul>
+        <a class="btn btn--dark" href="#estimate">Start my estimate <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Area ============ -->
+  <section class="section area" id="area">
+    <div class="wrap area__grid">
+      <div data-reveal>
+        <p class="kicker">Service area</p>
+        <h2>Based in Baldwin.<br>Working all over western Wisconsin.</h2>
+        <p>We're out of Baldwin in St. Croix County and regularly work the towns around it. Don't see yours? Call anyway. If we can get there, we'll come.</p>
+        <ul class="towns">
+          <li>Baldwin</li><li>Hammond</li><li>Woodville</li><li>Roberts</li><li>Hudson</li><li>New Richmond</li><li>River Falls</li><li>Glenwood City</li><li>Spring Valley</li><li>Menomonie</li><li>Wilson</li><li>Ellsworth</li>
+        </ul>
+      </div>
+      <div class="area__map" data-reveal>
+        <iframe title="Map of Baldwin, Wisconsin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Baldwin,+WI+54002&amp;z=9&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- ============ Estimate ============ -->
+  <section class="section estimate" id="estimate">
+    <div class="wrap estimate__grid">
+      <div class="estimate__info" data-reveal>
+        <p class="kicker">Free estimate</p>
+        <h2>Tell us about the door.</h2>
+        <p>Fill this out and we'll get back to you to set up a time. In a hurry, or is the door stuck right now? Call.</p>
+        <a class="big-phone" href="tel:+17159283002"><svg><use href="#i-phone"/></svg>715-928-3002</a>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
+          <li><span>Based in</span>Baldwin, WI 54002</li>
+          <li><span>Serving</span>Residential &amp; commercial</li>
+        </ul>
+      </div>
+      <form class="estimate__form" id="estimate-form" novalidate data-reveal>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field-row">
+          <label class="field"><span>Name *</span><input name="name" autocomplete="name" required></label>
+          <label class="field"><span>Phone *</span><input name="phone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <div class="field-row">
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+          <label class="field"><span>Town</span><input name="town" autocomplete="address-level2" placeholder="Baldwin"></label>
+        </div>
+        <label class="field"><span>What do you need? *</span>
+          <select name="service" required>
+            <option value="">Choose one</option>
+            <option>New door installation</option>
+            <option>Replace an existing door</option>
+            <option>Spring or cable repair</option>
+            <option>Door off track / damaged panel</option>
+            <option>Opener install or repair</option>
+            <option>Maintenance / tune-up</option>
+            <option>Commercial or pole building door</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <div class="build-pick" id="build-pick" hidden>
+          <span>Door Builder pick</span>
+          <p></p>
+          <button type="button" class="link-btn" id="build-clear">Remove</button>
+          <input type="hidden" name="door_builder">
+        </div>
+        <label class="field"><span>Details</span><textarea name="details" rows="4" placeholder="Door size, what's going on, best time to reach you..."></textarea></label>
+        <button class="btn btn--amber btn--block" type="submit">Send my request <svg><use href="#i-arrow"/></svg></button>
+        <p class="form-msg" id="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a class="brand brand--light" href="#top">
+        <svg class="logo-mark" viewBox="0 0 64 56" aria-hidden="true"><use href="#mark"/></svg>
+        <span class="brand__text"><b>Holldorf</b><small>Garage Doors LLC</small></span>
+      </a>
+      <p class="footer__blurb">Garage door installation, repair and openers for homes, shops and pole buildings. Baldwin, Wisconsin.</p>
+    </div>
+    <div>
+      <h4>Call or write</h4>
+      <p><a href="tel:+17159283002">715-928-3002</a><br><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>Jump to</h4>
+      <p><a href="#services">Services</a><br><a href="#builder">Door Builder</a><br><a href="#work">Our Work</a><br><a href="#trouble">Repairs</a></p>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <span>&copy; <span id="yr">2026</span> Holldorf Garage Doors LLC</span>
+    <a href="?intro" class="replay">Open the door again &uarr;</a>
+  </div>
+</footer>
+
+<a class="call-bar" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> Call for a free estimate</a>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+</div>
+
+<script src="assets/js/builder.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
