@@ -11,7 +11,8 @@ Static HTML/CSS/JS, no build step. One page plus `thank-you.html` and `404.html`
 | `assets/css/site.css` | All styles (colors and fonts are the variables at the top) |
 | `assets/js/main.js` | Garage-door intro, nav, gallery filter + lightbox, troubleshooter text, estimate form |
 | `assets/js/builder.js` | Door Builder: draws the door preview as SVG |
-| `assets/img/original/` | Photos exactly as the client sent them |
+| `assets/img/original/` | Photos and logo exactly as received (logo from their Facebook page) |
+| `assets/img/logo-*.webp` | Logo with the white background cut out |
 | `assets/img/photos/` | Cropped, color-corrected WebP versions (800 and 1600 wide) |
 | `tools/polish_photos.py` | Regenerates `photos/` and `og-image.jpg` from `original/` (needs Pillow) |
 

@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Holldorf Garage Doors | Garage Door Installation &amp; Repair in Baldwin, WI</title>
-<meta name="description" content="New garage doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Residential and commercial. Free estimates: 715-928-3002.">
-<meta name="theme-color" content="#16191c">
+<meta name="description" content="Garage door sales, installation and repair. New garage doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Residential and commercial. Free estimates: 715-928-3002.">
+<meta name="theme-color" content="#d7191f">
 <!-- Form service address (Formspree, Web3Forms, etc.). Leave empty and the form opens an email instead. -->
 <meta name="hd-form-endpoint" content="">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Holldorf Garage Doors | Baldwin, WI">
 <meta property="og:description" content="New doors, repairs and openers for homes, shops and pole buildings. Free estimates.">
@@ -39,6 +40,9 @@
   "image": "assets/img/og-image.jpg",
   "address": {"@type": "PostalAddress", "addressLocality": "Baldwin", "addressRegion": "WI", "postalCode": "54002", "addressCountry": "US"},
   "areaServed": ["Baldwin, WI", "St. Croix County, WI", "Pierce County, WI", "Dunn County, WI"],
+  "founder": {"@type": "Person", "name": "Taden Holldorf"},
+  "sameAs": ["https://www.facebook.com/p/Holldorf-Garage-Doors-LLC-61573275539430/"],
+  "logo": "assets/img/logo-800.webp",
   "priceRange": "$$"
 }
 </script>
@@ -51,11 +55,7 @@
     <div class="di-light"></div>
     <div class="di-door">
       <div class="di-sections"></div>
-      <div class="di-badge">
-        <svg class="logo-mark" viewBox="0 0 64 56"><use href="#mark"/></svg>
-        <span class="di-name">Holldorf</span>
-        <span class="di-sub">Garage Doors &middot; Baldwin, WI</span>
-      </div>
+      <img class="di-badge" src="assets/img/logo-800.webp" alt="" width="800" height="703">
       <div class="di-seal"></div>
     </div>
   </div>
@@ -78,11 +78,6 @@
 
 <!-- Shared SVG symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 64 56">
-    <path d="M32 2 2 22v6h4v26h52V28h4v-6z" fill="currentColor"/>
-    <path d="M14 30h36v22H14z" fill="var(--mark-door, #16191c)"/>
-    <path d="M16 33h32v3H16zm0 5.5h32v3H16zm0 5.5h32v3H16z" fill="currentColor" opacity=".9"/>
-  </symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" d="m4 12.5 5 5L20 6.5"/></symbol>
@@ -99,9 +94,8 @@
 
 <header class="site-header" id="top">
   <div class="wrap site-header__in">
-    <a class="brand" href="#top" aria-label="Holldorf Garage Doors, home">
-      <svg class="logo-mark" viewBox="0 0 64 56" aria-hidden="true"><use href="#mark"/></svg>
-      <span class="brand__text"><b>Holldorf</b><small>Garage Doors LLC</small></span>
+    <a class="brand" href="#top">
+      <img src="assets/img/logo-400.webp" alt="Holldorf Garage Doors" width="400" height="352">
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#services">Services</a>
@@ -110,7 +104,7 @@
       <a href="#trouble">Repairs</a>
       <a href="#estimate">Contact</a>
     </nav>
-    <a class="btn btn--amber btn--sm header-cta" href="tel:+17159283002"><svg><use href="#i-phone"/></svg><span>Call now</span></a>
+    <a class="btn btn--red btn--sm header-cta" href="tel:+17159283002"><svg><use href="#i-phone"/></svg><span>Call now</span></a>
     <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -121,31 +115,34 @@
   <section class="hero">
     <picture class="hero__bg">
       <source media="(max-width: 700px)" srcset="assets/img/photos/wood-look-modern-doors-800.webp">
-      <img src="assets/img/photos/wood-look-modern-doors-1600.webp" alt="Two wood-look garage doors with long windows, installed by Holldorf Garage Doors" width="1600" height="1088">
+      <img src="assets/img/photos/wood-look-modern-doors-1600.webp" alt="" width="1600" height="1088">
     </picture>
     <div class="wrap hero__in">
-      <p class="kicker hero__kicker"><span class="stamp">Baldwin, WI</span> Garage doors &middot; Openers &middot; Repair</p>
-      <h1 class="hero__title">Garage doors,<br><span>hung right.</span></h1>
-      <p class="hero__lede">New doors, spring and cable repair, and openers for homes, shops and pole buildings around Baldwin, Wisconsin. Fair prices, straight answers, and the estimate is free.</p>
-      <div class="hero__ctas">
-        <a class="btn btn--amber" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> 715-928-3002</a>
-        <a class="btn btn--ghost" href="#estimate">Get a free estimate <svg><use href="#i-arrow"/></svg></a>
+      <img class="hero__sign" src="assets/img/logo-800.webp" alt="Holldorf Garage Doors: garage door sales, installation and repairs. Taden Holldorf, 715-928-3002" width="800" height="703">
+      <div class="hero__copy">
+        <p class="hero__kicker"><span>Baldwin, WI</span><span>Residential</span><span>Commercial</span></p>
+        <h1 class="hero__title">Garage doors, <span>hung right.</span></h1>
+        <p class="hero__lede">Sales, installation and repairs for homes, shops and pole buildings. Fast, affordable, and done right the first time.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--red" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> 715-928-3002</a>
+          <a class="btn btn--ghost" href="#estimate">Free estimate <svg><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </div>
-    <ul class="hero__strip wrap" aria-label="At a glance">
-      <li><b>Residential</b><span>Attached &amp; detached garages</span></li>
-      <li><b>Commercial</b><span>Shops, barns &amp; pole buildings</span></li>
-      <li><b>Repairs</b><span>Springs, cables, off-track doors</span></li>
-      <li><b>Openers</b><span>Install, repair &amp; conversions</span></li>
-    </ul>
   </section>
 
-  <div class="hazard" aria-hidden="true"></div>
+  <div class="tape" aria-hidden="true">
+    <div class="tape__track">
+      <span>Free estimates</span><span>Sales</span><span>Installation</span><span>Repairs</span><span>Openers</span><span>Springs &amp; cables</span><span>715-928-3002</span>
+      <span>Free estimates</span><span>Sales</span><span>Installation</span><span>Repairs</span><span>Openers</span><span>Springs &amp; cables</span><span>715-928-3002</span>
+    </div>
+  </div>
+
 
   <!-- ============ Services ============ -->
   <section class="section services" id="services">
     <div class="wrap">
-      <header class="section-head" data-reveal>
+      <header class="section-head section-head--center" data-reveal>
         <p class="kicker">What we do</p>
         <h2>Every part of the door,<br>from the springs up.</h2>
         <p>One call covers it: picking a new door, hanging it, wiring the opener, or getting a stuck door back on track.</p>
@@ -194,7 +191,7 @@
   <!-- ============ Door builder ============ -->
   <section class="section builder" id="builder">
     <div class="wrap">
-      <header class="section-head section-head--light" data-reveal>
+      <header class="section-head section-head--light section-head--center" data-reveal>
         <p class="kicker">Door Builder</p>
         <h2>Build your door before we hang it.</h2>
         <p>Pick a style, finish and windows and see it on your building. Send the build with your estimate request and we'll price it out.</p>
@@ -254,7 +251,7 @@
           <div class="ticket">
             <div class="ticket__head"><span>Build ticket</span><span id="ticket-no">#HD-0000</span></div>
             <p id="build-summary" aria-live="polite"></p>
-            <a class="btn btn--amber btn--block" href="#estimate" id="quote-build">Quote this door <svg><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--red btn--block" href="#estimate" id="quote-build">Quote this door <svg><use href="#i-arrow"/></svg></a>
           </div>
         </form>
       </div>
@@ -264,11 +261,9 @@
   <!-- ============ Work ============ -->
   <section class="section work" id="work">
     <div class="wrap">
-      <header class="section-head section-head--row" data-reveal>
-        <div>
-          <p class="kicker">Our work</p>
-          <h2>Doors we've hung.</h2>
-        </div>
+      <header class="section-head section-head--center" data-reveal>
+        <p class="kicker">Our work</p>
+        <h2>Doors we've hung.</h2>
         <div class="filters" role="group" aria-label="Filter photos">
           <button type="button" class="is-on" data-filter="all">All</button>
           <button type="button" data-filter="home">Homes</button>
@@ -319,7 +314,7 @@
             <dt>Safe to check</dt><dd id="diag-check"></dd>
             <dt>Don't</dt><dd id="diag-dont"></dd>
           </dl>
-          <a class="btn btn--amber" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> Call 715-928-3002</a>
+          <a class="btn btn--red" href="tel:+17159283002"><svg><use href="#i-phone"/></svg> Call 715-928-3002</a>
         </div>
       </div>
     </div>
@@ -334,11 +329,12 @@
       </div>
       <div data-reveal>
         <p class="kicker">Why Holldorf</p>
-        <h2>Local crew. Fair price.<br>Door done right.</h2>
+        <h2>Local owner. Fair price.<br>Done right the first time.</h2>
+        <p class="why__lede">Holldorf Garage Doors is run by Taden Holldorf out of Baldwin. When you call, you’re talking to the guy who’ll be hanging your door.</p>
         <ul class="checks">
           <li><svg><use href="#i-check"/></svg><div><b>Free, straight estimates.</b> You'll know what it costs before we start, with no surprise add-ons.</div></li>
           <li><svg><use href="#i-check"/></svg><div><b>Homes and hard-working buildings.</b> Attached garages, detached garages, shops, barns and pole buildings.</div></li>
-          <li><svg><use href="#i-check"/></svg><div><b>Install and repair, one outfit.</b> The folks who hang your door are the ones you call when it needs work.</div></li>
+          <li><svg><use href="#i-check"/></svg><div><b>Sales, install and repair, one outfit.</b> The same person who sells and hangs your door is who you call when it needs work.</div></li>
           <li><svg><use href="#i-check"/></svg><div><b>Clean finish.</b> Trimmed out, adjusted, tested, and the old door hauled away.</div></li>
         </ul>
         <a class="btn btn--dark" href="#estimate">Start my estimate <svg><use href="#i-arrow"/></svg></a>
@@ -375,6 +371,7 @@
         <a class="big-phone" href="tel:+17159283002"><svg><use href="#i-phone"/></svg>715-928-3002</a>
         <ul class="contact-list">
           <li><span>Email</span><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></li>
+          <li><span>Owner</span>Taden Holldorf</li>
           <li><span>Based in</span>Baldwin, WI 54002</li>
           <li><span>Serving</span>Residential &amp; commercial</li>
         </ul>
@@ -409,7 +406,7 @@
           <input type="hidden" name="door_builder">
         </div>
         <label class="field"><span>Details</span><textarea name="details" rows="4" placeholder="Door size, what's going on, best time to reach you..."></textarea></label>
-        <button class="btn btn--amber btn--block" type="submit">Send my request <svg><use href="#i-arrow"/></svg></button>
+        <button class="btn btn--red btn--block" type="submit">Send my request <svg><use href="#i-arrow"/></svg></button>
         <p class="form-msg" id="form-msg" role="status"></p>
       </form>
     </div>
@@ -419,15 +416,12 @@
 <footer class="site-footer">
   <div class="wrap footer__grid">
     <div>
-      <a class="brand brand--light" href="#top">
-        <svg class="logo-mark" viewBox="0 0 64 56" aria-hidden="true"><use href="#mark"/></svg>
-        <span class="brand__text"><b>Holldorf</b><small>Garage Doors LLC</small></span>
-      </a>
-      <p class="footer__blurb">Garage door installation, repair and openers for homes, shops and pole buildings. Baldwin, Wisconsin.</p>
+      <a class="footer__logo" href="#top"><img src="assets/img/logo-400.webp" alt="Holldorf Garage Doors" width="400" height="352" loading="lazy"></a>
+      <p class="footer__blurb">Garage door sales, installation and repairs for homes, shops and pole buildings. Baldwin, Wisconsin.</p>
     </div>
     <div>
       <h4>Call or write</h4>
-      <p><a href="tel:+17159283002">715-928-3002</a><br><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a></p>
+      <p><a href="tel:+17159283002">715-928-3002</a><br><a href="mailto:holldorfgaragedoors@gmail.com">holldorfgaragedoors@gmail.com</a><br><a href="https://www.facebook.com/p/Holldorf-Garage-Doors-LLC-61573275539430/">Facebook</a></p>
     </div>
     <div>
       <h4>Jump to</h4>
