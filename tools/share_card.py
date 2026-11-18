@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the social share image (the preview when the link is posted) to assets/img/og-image.jpg.
+"""Render the social share image (the preview when the link is posted) to assets/img/share-card.jpg.
 
     python3 tools/share_card.py
 
@@ -78,8 +78,8 @@ def main():
                         '--virtual-time-budget=6000', f'--screenshot={shot}', page.as_uri()],
                        check=True, capture_output=True)
         im = Image.open(shot).convert('RGB').crop((0, 0, W, H))
-        im.save(ROOT / 'assets/img/og-image.jpg', 'JPEG', quality=88, optimize=True, progressive=True)
-    print('wrote assets/img/og-image.jpg', im.size)
+        im.save(ROOT / 'assets/img/share-card.jpg', 'JPEG', quality=88, optimize=True, progressive=True)
+    print('wrote assets/img/share-card.jpg', im.size)
 
 
 if __name__ == '__main__':

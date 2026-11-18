@@ -40,7 +40,7 @@ amp = lambda t: t.replace('&', '&amp;')
 OG_TAGS = '''<meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Holldorf Garage Doors: garage doors, hung right. Sales, installation, repairs and openers. Baldwin, WI. 715-928-3002">
-<meta name="twitter:image" content="'''+SITE+'''assets/img/og-image.jpg">'''
+<meta name="twitter:image" content="'''+SITE+'''assets/img/share-card.jpg">'''
 ON, ON_PAGE = ' class="is-on"', ' class="is-on" aria-current="page"'
 
 BUSINESS = {
@@ -186,11 +186,11 @@ def head(root, title, desc, path, ld=(), noindex=False):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}assets/img/og-image.jpg">
+<meta property="og:image" content="{SITE}assets/img/share-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Holldorf Garage Doors: garage doors, hung right. Sales, installation, repairs and openers. Baldwin, WI. 715-928-3002">
-<meta name="twitter:image" content="{SITE}assets/img/og-image.jpg">
+<meta name="twitter:image" content="{SITE}assets/img/share-card.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -386,9 +386,9 @@ def build_index():
     s = re.sub(r'href="assets/css/site\.css(\?v=\d+)?"', f'href="assets/css/site.css?v={VERSION}"', s)
     if '<link rel="canonical"' not in s:
         s = s.replace('<meta name="theme-color"', f'<link rel="canonical" href="{SITE}">\n<meta property="og:url" content="{SITE}">\n<meta name="theme-color"', 1)
-    s = s.replace('<meta property="og:image" content="assets/img/og-image.jpg">', f'<meta property="og:image" content="{SITE}assets/img/og-image.jpg">')
+    s = s.replace('<meta property="og:image" content="assets/img/share-card.jpg">', f'<meta property="og:image" content="{SITE}assets/img/share-card.jpg">')
     if 'og:image:width' not in s:
-        s = s.replace(f'<meta property="og:image" content="{SITE}assets/img/og-image.jpg">', f'<meta property="og:image" content="{SITE}assets/img/og-image.jpg">\n' + OG_TAGS, 1)
+        s = s.replace(f'<meta property="og:image" content="{SITE}assets/img/share-card.jpg">', f'<meta property="og:image" content="{SITE}assets/img/share-card.jpg">\n' + OG_TAGS, 1)
     p.write_text(s)
     print('wrote index.html')
 

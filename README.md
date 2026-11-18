@@ -31,7 +31,7 @@ The build rewrites the generated pages and refreshes the blocks in `index.html` 
 Scripts: `main.js` (every page: intro, nav, section doors, gallery, troubleshooter),
 `builder.js` (Door Builder), `estimate.js` (estimate form + Door Planner).
 Photos: `tools/polish_photos.py` regenerates `assets/img/photos/` from `assets/img/original/`.
-Share image (link previews): `python3 tools/share_card.py` renders `assets/img/og-image.jpg` (1200x630, needs Google Chrome).
+Share image (link previews): `python3 tools/share_card.py` renders `assets/img/share-card.jpg` (1200x630, needs Google Chrome).
 
 ## Garage-door intro
 
